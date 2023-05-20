@@ -14,7 +14,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-2xl">O. BERNARD</strong>
+				<strong class="text-4xl">O. BERNARD</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
@@ -50,7 +50,7 @@
 					<span class="font-semibold">Get my resume</span>
 				</a>
 				<h2 class="gradient-heading">
-					<div class="bg-surface-50-900-token text-token text-xl font-semibold p-3">Let's connect!</div>
+					<a href="#connect" class="bg-surface-50-900-token text-token text-xl font-semibold p-3">Let's connect!</a>
 				</h2>
 				<LightSwitch />
 			</svelte:fragment>

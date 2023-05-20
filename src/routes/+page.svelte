@@ -1,4 +1,7 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+	import SkillsSection from '$lib/sections/skills/SkillsSection.svelte';
+	import ProjectsSection from '$lib/sections/projects/ProjectsSection.svelte';
+</script>
 
 <section class="m-12 gap-3 flex flex-col items-start">
 	<span class="text-4xl font-extrabold">Hi<i class="fa-regular fa-hand fa-shake"></i> I'm Onésime</span>
@@ -9,55 +12,11 @@
 	<span class="font-bold">Let's connect <i class="fa-solid fa-arrow-right"></i></span>
 </section>
 
-<section class=" text-center border-surface-900-50-token border-2 rounded-xl m-12">
-	<h2 class="h2 font-bold">My tech stack</h2>
-	<div class="h-96">
-		<i class="fa-2xl fa-brands fa-python"></i>
+<SkillsSection />
 
-		<i class="fa-2xl fa-brands fa-html5"></i>
-		<i class="fa-2xl fa-brands fa-js"></i>
-		<i class="fa-2xl fa-brands fa-css3-alt"></i>
+<ProjectsSection />
 
-		<div class="flex flex-row flex-wrap">
-			<img class="max-h-12" src="java.png">
-			<img class="max-h-12" src="ocaml.png">
-			<img class="max-h-12" src="tux.png">
-			<img class="max-h-12" src="c_lang.png">
-			<img class="max-h-12" src="cpp.png">
-			<img class="max-h-12" src="rust.png">
-			<img class="max-h-12" src="golang.png">
-			<img class="max-h-12" src="latex.png">
-			<img class="max-h-12" src="python.png">
-			<img class="max-h-12" src="r_lang.png">
-			<img class="max-h-12" src="opengl.png">
-			<img class="max-h-12" src="js.png">
-			<img class="max-h-12" src="html_shield_mark.png">
-			<img class="max-h-12" src="css_shield_mark.png">
-			<img class="max-h-12" src="svelte.png">
-			<img class="max-h-12" src="tailwind.png">
-			<img class="max-h-12" src="docker.png">
-			<img class="max-h-12" src="redis.png">
-			
-		</div>
-	</div>
-</section>
-
-<section class=" text-center border-surface-900-50-token border-2 rounded-xl m-12">
-		<h2 class="h2 font-bold">Sample projects</h2>
-		<div class="flex flex-row justify-between flex-wrap">
-			{#each { length: 4 } as _}
-			<div class="card card-hover m-4 w-64 h-fit group relative">
-				<section>
-					<img src="https://source.unsplash.com/vjUokUWbFOs/400x175" class="bg-black/50 w-full aspect-[21/9] group-hover:blur-sm" alt="Post" />
-				</section>
-				<section class="absolute content hidden group-hover:block top-0 left-0 w-full h-full text-center text-lg font-bold">content</section>
-			</div>
-			{/each}
-		</div>
-
-</section>
-
-<section class="flex flex-row py-12 justify-around items-center bg-gradient-to-br variant-gradient-primary-tertiary">
+<section id="connect" class="flex flex-row py-12 justify-around items-center bg-gradient-to-br variant-gradient-primary-tertiary">
 	<i class="fa-10x scale-150 text-surface-50-900-token fa-solid fa-link"></i>
 	<div class="basis-7/12">
 		<h2 class="text-5xl font-bold my-5 text-surface-50-900-token">Get in touch</h2>
