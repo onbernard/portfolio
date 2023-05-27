@@ -49,8 +49,8 @@
 					<i class="fa-regular fa-file-lines"></i>
 					<span class="font-semibold">Get my resume</span>
 				</a>
-				<h2 class="gradient-heading">
-					<a href="#connect" class="bg-surface-50-900-token text-token text-xl font-semibold p-3">Let's connect!</a>
+				<h2 class="gradient-border group">
+					<a href="#connect" class="bg-surface-100-800-token text-token text-xl font-semibold p-3 group-hover:bg-transparent">Let's connect!</a>
 				</h2>
 				<LightSwitch />
 			</svelte:fragment>
@@ -62,15 +62,17 @@
 
 <style lang="postcss">
 	.social-btn {
-		@apply btn btn-icon variant-ringed-surface;
+		@apply btn btn-icon variant-ringed;
 	}
 	.resume-btn {
-		@apply btn variant-ringed-surface;
+		@apply btn variant-ringed;
 	}
 	.connect-btn {
 		@apply btn btn-xl variant-ringed rounded-none;
 	}
-	.gradient-heading {
-		@apply btn rounded-none bg-gradient-to-br variant-gradient-primary-tertiary p-0.5;
+	.gradient-border {
+        @apply flex justify-center items-center p-0.5;
+		@apply bg-gradient-to-br variant-gradient-primary-tertiary;
+        @apply transition-all;
 	}
 </style>

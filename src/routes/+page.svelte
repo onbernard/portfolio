@@ -1,16 +1,10 @@
 <script lang="ts">
 	import SkillsSection from '$lib/sections/skills/SkillsSection.svelte';
 	import ProjectsSection from '$lib/sections/projects/ProjectsSection.svelte';
+	import PresentationSection from '$lib/sections/presentation/PresentationSection.svelte';
 </script>
 
-<section class="m-12 gap-3 flex flex-col items-start">
-	<span class="text-4xl font-extrabold">Hi<i class="fa-regular fa-hand fa-shake"></i> I'm Onésime</span>
-	<p>I am a computer science and mathematics student at Université Paul Sabatier de Toulouse. I previously studied engineering at the École Polytechnique de Louvain in Belgium. Science fascinates me and I love to learn new stuff. My interests lies primarily with computer simulations and how to solve real-world problem with procedural solutions. To that end, i like to tinker with artificial intelligence and more conventional algorithms.
-
-	When I am not breaking a computer, you can find me on my bike 🚴, watching Formula 1 🏎️ or playing video games 🎮 with friends. I can be a massive nerd but i learned to live with it.
-	</p>
-	<span class="font-bold">Let's connect <i class="fa-solid fa-arrow-right"></i></span>
-</section>
+<PresentationSection />
 
 <SkillsSection />
 
