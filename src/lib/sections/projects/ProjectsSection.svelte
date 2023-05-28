@@ -1,110 +1,59 @@
-<section class=" text-center border-surface-900-50-token border-2 rounded-xl m-12">
-    <h2 class="h2 font-bold">Sample projects</h2>
+<script lang="ts">
+    import { projectData } from "./project_data";
+</script>
 
-    <div class="flex flex-row justify-around flex-wrap">
-
-        <div class="card m-4 w-64 h-fit group relative">
-            <section class="font-bold p-1 variant-soft-primary">
-                FunBandit
-            </section>
-            <section>
-                <img src="stock/bandit1.jpg" class="bg-black/50 w-full aspect-[16/10]" alt="Post" />
-            </section>
-            <div class="overlay">
-                <a
-					class="btn btn-icon variant-filled"
-					href="https://github.com/onbernard/funbandit"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i class="fa-lg fa-brands fa-github"></i>
-				</a>
+<section class="m-12 grid grid-cols-5 gap-2">
+    {#each projectData as item}
+        <div class="project-card group border-surface-900-50-token">
+            <img src="stock/{item.image}" class="bg-image group-hover:blur-sm transition-all" alt="Post" />
+            <div class="tech-pill variant-glass">
+                {#each item.logos as lg}
+                    <img class="h-full" src="logos/{lg}">
+                {/each}
+            </div>
+            <a
+                class="btn h-12 variant-glass p-0"
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <span class="variant-glass rounded-full h-full w-12 flex justify-center items-center">
+                    <i class="fa-lg fa-brands fa-github"></i>
+                </span>
+                <span class="pr-3 font-semibold">{item.name}</span>
+            </a>
+            <div class="bottom-0 h-0 flex justify-center items-center overflow-hidden group-hover:h-12 absolute w-full text-center variant-glass transition-all">
+                {item.description}
             </div>
         </div>
-
-        <div class="card m-4 w-64 h-fit group relative">
-            <section class="font-bold p-1 variant-soft-primary">
-                MeshEarth
-            </section>
-            <section>
-                <img src="stock/drone2.jpg" class="bg-black/50 w-full aspect-[16/10]" alt="Post" />
-            </section>
-            <div class="overlay">
-                <a
-					class="btn btn-icon variant-filled"
-					href="https://github.com/onbernard/MeshEarth"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i class="fa-lg fa-brands fa-github"></i>
-				</a>
-            </div>
-        </div>
-
-        <div class="card m-4 w-64 h-fit group relative">
-            <section class="font-bold p-1 variant-soft-primary">
-                Travelling Salesman
-            </section>
-            <section>
-                <img src="stock/tsp.png" class="bg-black/50 w-full aspect-[16/10]" alt="Post" />
-            </section>
-            <div class="overlay">
-                <a
-					class="btn btn-icon variant-filled"
-					href="https://github.com/onbernard/MeshEarth"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i class="fa-lg fa-brands fa-github"></i>
-				</a>
-            </div>
-        </div>
-
-        <div class="card m-4 w-64 h-fit group relative">
-            <section class="font-bold p-1 variant-soft-primary">
-                This website
-            </section>
-            <section>
-                <img src="stock/portfolio1.jpg" class="bg-black/50 w-full aspect-[16/10]" alt="Post" />
-            </section>
-            <div class="overlay">
-                <a
-					class="btn btn-icon variant-filled"
-					href="https://github.com/onbernard/MeshEarth"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i class="fa-lg fa-brands fa-github"></i>
-				</a>
-            </div>
-        </div>
-
-        <div class="card m-4 w-64 h-fit group relative">
-            <section class="font-bold p-1 variant-soft-primary">
-                Equipment losses viz
-            </section>
-            <section>
-                <img src="stock/ukraine2.jpg" class="bg-black/50 w-full aspect-[16/10]" alt="Post" />
-            </section>
-            <div class="overlay">
-                <a
-					class="btn btn-icon variant-filled"
-					href="https://github.com/onbernard/MeshEarth"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i class="fa-lg fa-brands fa-github"></i>
-				</a>
-            </div>
-        </div>
-
-    </div>
+    {/each}
 </section>
 
 <style lang="postcss">
-    .overlay {
-        @apply opacity-0 group-hover:opacity-100 absolute top-0 left-0 w-full h-full;
-        @apply backdrop-blur-sm;
-        transition: opacity 200ms ease-in-out;
+    .project-card {
+        @apply aspect-square;
+        @apply border-2;
+        @apply flex justify-center items-center;
+        position: relative;
+    }
+    .bg-image {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        max-width: 100%;
+    }
+    .tech-pill {
+        @apply absolute top-0 right-[50%] translate-x-[50%];
+        @apply flex justify-center items-center;
+        @apply p-1 gap-1;
+        @apply h-12;
+        @apply rounded-b-2xl;
+    }
+    .tech-pill img {
+        @apply h-8 m-1;
     }
 </style>
