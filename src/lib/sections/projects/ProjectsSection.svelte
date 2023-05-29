@@ -1,33 +1,37 @@
 <script lang="ts">
+    export let styleClasses = "";
     import { projectData } from "./project_data";
 </script>
 
-<section class="m-12 grid grid-cols-5 gap-2">
-    {#each projectData as item}
-        <div class="project-card group border-surface-900-50-token">
-            <img src="stock/{item.image}" class="bg-image group-hover:blur-sm transition-all" alt="Post" />
-            <div class="tech-pill variant-glass">
-                {#each item.logos as lg}
-                    <img class="h-full" src="logos/{lg}">
-                {/each}
+<div class={styleClasses}>
+    <section class="grid grid-cols-5 gap-2 border-t-2 border-surface-900-50-token pt-6 relative">
+        <h2 class="text-4xl font-extrabold absolute top-0 left-[50%] -translate-x-[50%] -translate-y-[50%] variant-filled">Some of my projects</h2>
+        {#each projectData as item}
+            <div class="project-card group border-surface-900-50-token">
+                <img src="stock/{item.image}" class="bg-image group-hover:blur-sm transition-all" alt="Post" />
+                <div class="tech-pill variant-glass">
+                    {#each item.logos as lg}
+                        <img class="h-full" src="logos/{lg}">
+                    {/each}
+                </div>
+                <a
+                    class="btn h-12 variant-glass p-0"
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span class="border-token border-surface-900-50-token rounded-full h-full w-12 flex justify-center items-center">
+                        <i class="fa-lg fa-brands fa-github"></i>
+                    </span>
+                    <span class="pr-3 font-semibold">{item.name}</span>
+                </a>
+                <div class="bottom-0 h-0 flex justify-center items-center overflow-hidden group-hover:h-12 absolute w-full text-center variant-glass transition-all">
+                    {item.description}
+                </div>
             </div>
-            <a
-                class="btn h-12 variant-glass p-0"
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <span class="variant-glass rounded-full h-full w-12 flex justify-center items-center">
-                    <i class="fa-lg fa-brands fa-github"></i>
-                </span>
-                <span class="pr-3 font-semibold">{item.name}</span>
-            </a>
-            <div class="bottom-0 h-0 flex justify-center items-center overflow-hidden group-hover:h-12 absolute w-full text-center variant-glass transition-all">
-                {item.description}
-            </div>
-        </div>
-    {/each}
-</section>
+        {/each}
+    </section>
+</div>
 
 <style lang="postcss">
     .project-card {

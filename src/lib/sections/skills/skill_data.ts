@@ -25,10 +25,10 @@ export const skillData = {
             "scale": 110,
         },
         {
-            "logosPath": ["ocaml.png"],
+            "logosPath": ["ocaml.png", "coq.png"],
             "levelPct": 50,
             "levelText": "School",
-            "scale": 90,
+            "scale": 100,
         },
         {
             "logosPath": ["matlab.png"],

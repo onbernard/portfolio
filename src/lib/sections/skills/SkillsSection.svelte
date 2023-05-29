@@ -1,15 +1,18 @@
 <script lang="ts">
+    export let styleClasses = "";
     import { skillData } from './skill_data';
     let active = 0;
 </script>
 
-<div class="flex flex-row justify-center m-12 gap-3">
+<div class="{styleClasses}">
+<div class="flex flex-row justify-center gap-3 border-t-2 border-surface-900-50-token pt-6 relative">
+    <h2 class="text-4xl font-extrabold absolute top-0 -translate-y-[50%] variant-filled">My tech stack</h2>
     <button class="panel" class:active={active===0} on:click={()=>active=0}>
         <div class="title">General Programming</div>
         <div class="content">
             {#each skillData.generalProgramming as item}
             <div class="item">
-                <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
+                <div class="icon gap-1">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
                 <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
             </div>
             {/each}
@@ -55,6 +58,7 @@
         </div>
         <img class="bg-img" src="webdev1.jpg" alt="datacenter">
     </button>
+</div>
 </div>
 
 <style lang="postcss">
