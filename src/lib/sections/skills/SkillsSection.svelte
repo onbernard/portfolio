@@ -5,60 +5,60 @@
 </script>
 
 <div class="{styleClasses}">
-<div class="flex flex-row justify-center gap-3 border-t-2 border-surface-900-50-token pt-6 relative">
-    <h2 class="text-4xl font-extrabold absolute top-0 -translate-y-[50%] variant-filled">My tech stack</h2>
-    <button class="panel" class:active={active===0} on:click={()=>active=0}>
-        <div class="title">General Programming</div>
-        <div class="content">
-            {#each skillData.generalProgramming as item}
-            <div class="item">
-                <div class="icon gap-1">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
-                <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+    <div class="flex flex-row justify-center gap-3 border-token border-surface-900-50-token p-6 relative">
+        <h2 class="text-4xl font-extrabold absolute top-0 left-6 -translate-y-[50%] variant-filled">My tech stack</h2>
+        <button class="panel" class:active={active===0} on:click={()=>active=0}>
+            <div class="title">General Programming</div>
+            <div class="content">
+                {#each skillData.generalProgramming as item}
+                <div class="item">
+                    <div class="icon gap-1">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
+                    <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+                </div>
+                {/each}
             </div>
-            {/each}
-        </div>
-        <img class="bg-img" src="code1.jpg" alt="datacenter">
-    </button>
+            <img class="bg-img" src="code1.jpg" alt="datacenter">
+        </button>
 
-    <button class="panel" class:active={active===1} on:click={()=>active=1}>
-        <div class="title">Web Development</div>
-        <div class="content">
-            {#each skillData.webDevelopment as item}
-            <div class="item">
-                <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
-                <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+        <button class="panel" class:active={active===1} on:click={()=>active=1}>
+            <div class="title">Web Development</div>
+            <div class="content">
+                {#each skillData.webDevelopment as item}
+                <div class="item">
+                    <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
+                    <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+                </div>
+                {/each}
             </div>
-            {/each}
-        </div>
-        <img class="bg-img" src="webdev2.jpg" alt="datacenter">
-    </button>
+            <img class="bg-img" src="webdev2.jpg" alt="datacenter">
+        </button>
 
-    <button class="panel" class:active={active===2} on:click={()=>active=2}>
-        <div class="title">Systems & Databases</div>
-        <div class="content">
-            {#each skillData.systemsAndDB as item}
-            <div class="item">
-                <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
-                <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+        <button class="panel" class:active={active===2} on:click={()=>active=2}>
+            <div class="title">Systems & Databases</div>
+            <div class="content">
+                {#each skillData.systemsAndDB as item}
+                <div class="item">
+                    <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
+                    <div class="level-bar"><div style="width:{item.levelPct}%">{@html item.levelText}</div></div>
+                </div>
+                {/each}
             </div>
-            {/each}
-        </div>
-        <img class="bg-img" src="datacenter2.jpg" alt="datacenter">
-    </button>
+            <img class="bg-img" src="datacenter2.jpg" alt="datacenter">
+        </button>
 
-    <button class="panel" class:active={active===3} on:click={()=>active=3}>
-        <div class="title">Content Creation</div>
-        <div class="content">
-            {#each skillData.contentCreation as item}
-            <div class="item">
-                <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
-                <div class="level-bar"><div style="width:{item.levelPct}%">{item.levelText}</div></div>
+        <button class="panel" class:active={active===3} on:click={()=>active=3}>
+            <div class="title">Content Creation</div>
+            <div class="content">
+                {#each skillData.contentCreation as item}
+                <div class="item">
+                    <div class="icon">{#each item.logosPath as logo}<img class="scale-{item.scale}" src="logos/{logo}" alt={logo}>{/each}</div>
+                    <div class="level-bar"><div style="width:{item.levelPct}%">{item.levelText}</div></div>
+                </div>
+                {/each}
             </div>
-            {/each}
-        </div>
-        <img class="bg-img" src="webdev1.jpg" alt="datacenter">
-    </button>
-</div>
+            <img class="bg-img" src="webdev1.jpg" alt="datacenter">
+        </button>
+    </div>
 </div>
 
 <style lang="postcss">
@@ -81,6 +81,7 @@
         @apply variant-form-material;
         @apply font-extrabold text-lg text-white;
         @apply h-24 p-2;
+        text-shadow: -1px -1px 0 rgb(var(--color-surface-900)), 1px -1px 0 rgb(var(--color-surface-900)), -1px 1px 0 rgb(var(--color-surface-900)), 1px 1px 0 rgb(var(--color-surface-900));
     }
     .bg-img {
         display: block;

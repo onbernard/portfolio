@@ -8,3 +8,16 @@ html, body {
 *::after {
     box-sizing: border-box;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-outline-token {
+		text-shadow: -1px -1px 0 rgb(var(--color-surface-900)), 1px -1px 0 rgb(var(--color-surface-900)), -1px 1px 0 rgb(var(--color-surface-900)), 1px 1px 0 rgb(var(--color-surface-900));
+    }
+    .dark .text-outline-token {
+        text-shadow: -1px -1px 0 rgb(var(--color-surface-50)), 1px -1px 0 rgb(var(--color-surface-50)), -1px 1px 0 rgb(var(--color-surface-50)), 1px 1px 0 rgb(var(--color-surface-50));
+    }
+}
