@@ -34,7 +34,7 @@ export const skillData = {
             "logosPath": ["matlab.png"],
             "levelPct": 50,
             "levelText": "School",
-            "scale": 125,
+            "scale": 150,
         },
         {
             "logosPath": ["rust_color.png"],
@@ -60,7 +60,7 @@ export const skillData = {
             "logosPath": ["fastapi.png"],
             "levelPct": 100,
             "levelText": "Pro",
-            "scale": 110,
+            "scale": 1125,
         },
         {
             "logosPath": ["svelte_mark.png"],
@@ -128,7 +128,7 @@ export const skillData = {
             "logosPath": ["redis.png"],
             "levelPct": 80,
             "levelText": "Pro",
-            "scale": 90,
+            "scale": 75,
         },
     ],
     "contentCreation": [
@@ -148,13 +148,13 @@ export const skillData = {
             "logosPath": ["ue_mark.png"],
             "levelPct": 30,
             "levelText": "Beginner",
-            "scale": 125,
+            "scale": 150,
         },
         {
             "logosPath": ["blender_mark.png"],
             "levelPct": 30,
             "levelText": "Beginner",
-            "scale": 90,
+            "scale": 75,
         },
     ],
 }

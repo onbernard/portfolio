@@ -11,4 +11,3 @@
 
 <ProjectsSection styleClasses="m-12"/>
 
-<ConnectionSection />

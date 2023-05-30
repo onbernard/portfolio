@@ -4,14 +4,14 @@
 </script>
 
 <div class={styleClasses}>
-    <section class="grid grid-cols-5 gap-2 border-token border-surface-900-50-token p-6 relative">
+    <section class="grid grid-cols-5 gap-2 variant-ringed p-6 relative">
         <h2 class="text-4xl font-extrabold absolute top-0 left-6 -translate-y-[50%] variant-filled">Some of my projects</h2>
         {#each projectData as item}
             <div class="project-card group border-surface-900-50-token">
-                <img src="stock/{item.image}" class="bg-image group-hover:blur-sm transition-all" alt="Post" />
-                <div class="tech-pill variant-glass">
+                <img src="stock/{item.image}" class="bg-image group-hover:blur-sm transition-all" alt="bg-card" />
+                <div class="tech-pill variant-ghost">
                     {#each item.logos as lg}
-                        <img class="h-full" src="logos/{lg}">
+                        <img class="h-full" src="logos/{lg}" alt="logo-{lg}">
                     {/each}
                 </div>
                 <a
@@ -35,12 +35,13 @@
 
 <style lang="postcss">
     .project-card {
-        @apply aspect-square;
-        @apply border-2;
+        @apply aspect-square rounded-lg;
         @apply flex justify-center items-center;
         position: relative;
+        overflow: hidden;
     }
     .bg-image {
+        @apply rounded-lg;
         display: block;
         position: absolute;
         inset: 0;
