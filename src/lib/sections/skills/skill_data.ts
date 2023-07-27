@@ -1,0 +1,160 @@
+export const skillData = {
+    "generalProgramming": [
+        {
+            "logosPath": ["python.png"],
+            "levelPct": 100,
+            "levelText": "Pro",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["r_lang.png"],
+            "levelPct": 60,
+            "levelText": "School+Internship",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["c_lang.png", "cpp.png"],
+            "levelPct": 50,
+            "levelText": "School",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["java_mark.png"],
+            "levelPct": 50,
+            "levelText": "School",
+            "scale": 110,
+        },
+        {
+            "logosPath": ["ocaml.png", "coq.png"],
+            "levelPct": 50,
+            "levelText": "School",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["matlab.png"],
+            "levelPct": 50,
+            "levelText": "School",
+            "scale": 150,
+        },
+        {
+            "logosPath": ["rust_color.png"],
+            "levelPct": 40,
+            "levelText": 'Beginner<span class="ml-auto">♥</span>',
+            "scale": 110,
+        },
+        {
+            "logosPath": ["golang.png"],
+            "levelPct": 30,
+            "levelText": "Beginner",
+            "scale": 75,
+        },
+        {
+            "logosPath": ["opengl.png"],
+            "levelPct": 30,
+            "levelText": "Beginner",
+            "scale": 90,
+        },
+    ],
+    "webDevelopment": [
+        {
+            "logosPath": ["fastapi.png"],
+            "levelPct": 100,
+            "levelText": "Pro",
+            "scale": 1125,
+        },
+        {
+            "logosPath": ["svelte_mark.png"],
+            "levelPct": 90,
+            "levelText": 'Pro<span class="ml-auto">♥</span>',
+            "scale": 90,
+        },
+        {
+            "logosPath": ["tailwind_mark.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 125,
+        },
+        {
+            "logosPath": ["html_shield.png", "css_shield.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["js.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 90,
+        },
+        {
+            "logosPath": ["nodejs.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["flask_mark.png"],
+            "levelPct": 80,
+            "levelText": "Intermediate",
+            "scale": 90,
+        },
+    ],
+    "systemsAndDB": [
+        {
+            "logosPath": ["linux_mark.png"],
+            "levelPct": 100,
+            "levelText": 'I use <svg height=30 class="m-1 fill-grey-800" viewBox="0 0 24 24"><path d="m9.321 18.304.003-.121c.061-2.437 1.328-4.312 2.83-4.184 1.502.126 2.669 2.207 2.61 4.643-.012.459-.063.9-.154 1.309 2.718.532 5.637 1.882 9.389 4.048-.739-1.362-1.4-2.59-2.032-3.759-.994-.77-2.03-1.773-4.142-2.857 1.452.378 2.493.812 3.303 1.3C14.714 6.746 14.196 5.159 11.997 0c-1.069 2.618-1.712 4.33-2.901 6.872.73.774 1.625 1.673 3.079 2.69-1.563-.643-2.629-1.289-3.426-1.958C7.227 10.78 4.841 15.304 0 24c3.805-2.196 6.754-3.549 9.502-4.067a6.94 6.94 0 0 1-.181-1.629zM11.39 1.002 11.391 1z"/></svg> btw',
+            "scale": 125,
+        },
+        {
+            "logosPath": ["bash_mark.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["docker_mark.png"],
+            "levelPct": 90,
+            "levelText": "Pro",
+            "scale": 90,
+        },
+        {
+            "logosPath": ["sql.png"],
+            "levelPct": 80,
+            "levelText": "Pro",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["redis.png"],
+            "levelPct": 80,
+            "levelText": "Pro",
+            "scale": 75,
+        },
+    ],
+    "contentCreation": [
+        {
+            "logosPath": ["latex.png"],
+            "levelPct": 100,
+            "levelText": "Pro",
+            "scale": 90,
+        },
+        {
+            "logosPath": ["office_mark.png"],
+            "levelPct": 60,
+            "levelText": "Advanced",
+            "scale": 100,
+        },
+        {
+            "logosPath": ["ue.png"],
+            "levelPct": 30,
+            "levelText": "Beginner",
+            "scale": 150,
+        },
+        {
+            "logosPath": ["blender_mark.png"],
+            "levelPct": 30,
+            "levelText": "Beginner",
+            "scale": 75,
+        },
+    ],
+}

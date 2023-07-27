@@ -1,0 +1,47 @@
+/*Write your global styles here, in PostCSS syntax */
+/*place global styles here */
+html,
+body {
+	@apply h-full overflow-hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.text-outline-token {
+		text-shadow: -1px -1px 0 rgb(var(--color-surface-900)), 1px -1px 0 rgb(var(--color-surface-900)),
+			-1px 1px 0 rgb(var(--color-surface-900)), 1px 1px 0 rgb(var(--color-surface-900));
+	}
+	.dark .text-outline-token {
+		text-shadow: -1px -1px 0 rgb(var(--color-surface-50)), 1px -1px 0 rgb(var(--color-surface-50)),
+			-1px 1px 0 rgb(var(--color-surface-50)), 1px 1px 0 rgb(var(--color-surface-50));
+	}
+	.border-pri-sec {
+		border-color: rgb(var(--color-primary-400));
+	}
+	.dark .border-pri-sec {
+		border-color: rgb(var(--color-secondary-400));
+	}
+	.gradient-border {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: .125rem;
+		background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+		--tw-gradient-from: rgb(var(--color-primary-500) / 1) var(--tw-gradient-from-position);
+		--tw-gradient-to: rgb(var(--color-primary-500) / 0) var(--tw-gradient-to-position);
+		--tw-gradient-to: rgb(var(--color-tertiary-500) / 1) var(--tw-gradient-to-position);
+		--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+		color: rgb(var(--on-primary));transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+	}
+}
