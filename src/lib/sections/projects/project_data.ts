@@ -27,11 +27,11 @@ export const projectData = [
         "name": "Portfolio",
         "description": "Check this website's source code",
     },
-    {
-        "image": "ukraine3.jpg",
-        "logos": ["python.png", "svelte.png", "d3.png"],
-        "link": "https://github.com/onbernard/funbandit",
-        "name": "Russian losses",
-        "description": "A vizualisation for russian equipment losses",
-    },
+    // {
+    //     "image": "ukraine3.jpg",
+    //     "logos": ["python.png", "svelte.png", "d3.png"],
+    //     "link": "https://github.com/onbernard/funbandit",
+    //     "name": "Russian losses",
+    //     "description": "A vizualisation for russian equipment losses",
+    // },
 ]

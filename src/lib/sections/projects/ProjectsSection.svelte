@@ -4,7 +4,7 @@
 </script>
 
 <div class={styleClasses}>
-    <section class="grid grid-cols-5 gap-2 variant-ringed p-6 relative">
+    <section class="grid grid-cols-4 gap-2 variant-ringed p-6 relative">
         <h2 class="text-4xl font-extrabold absolute top-0 left-6 -translate-y-[50%] variant-filled">Some of my projects</h2>
         {#each projectData as item}
             <div class="aspect-square rounded-lg flex justify-center items-center relative group border-surface-900-50-token overflow-hidden">
