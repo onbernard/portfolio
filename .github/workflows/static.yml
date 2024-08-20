@@ -26,9 +26,6 @@ jobs:
       - uses: actions/configure-pages@v1
         id: pages
       - uses: oven-sh/setup-bun@v2
-        with:
-          node-version: 20
-          cache: 'npm'
       - run: bun install
       - run: bun run build
       - name: Upload artifact
