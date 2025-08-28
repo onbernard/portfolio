@@ -1,3 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@theme {
+    --font-boldonse: "Boldonse", sans-serif;
+    --font-montserrat: "Montserrat Underline", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';

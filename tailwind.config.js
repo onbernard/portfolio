@@ -1,11 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-  theme: {
-    extend: {},
-  },
+module.exports = {
   plugins: [
-    // require('@tailwindcss/typography'),
-  ],
+    require('@tailwindcss/container-queries'),
+  ]
 }
-
